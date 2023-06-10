@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practica de Video</title>
+    </head>
+    <body>
+        <div id="div" class="div">
+        <h1 class="titulo">Seleccionar video</h1>
+        <div id="loadingMessage" style="display:none;">Cargando video... por favor espera.</div>
+        <input type="file" accept="video/mp4" class="video" id="videoInput" name="files" onchange="loadVideo(event)">
+        <video id="videoPlayer" controls style="display: none; width: 50%"></video>
+        <div id="controls-div" class="controls">
+         <button class="buttons" id="playButton" style="display: none;" onclick="playVideo()">
+            Ejecutar
+         </button> 
+
+        <button class="buttons" id="pauseButton" style="display: none;" onclick="pauseVideo()">
+         Pausar
+         </button>
+         
+         <button class="volumen" id="volumeUp" style="display: none;" onclick="increaseVolume()">
+            Subir Volumen
+         </button>
+         
+         <button class="volumen" id="volumeDown" style="display: none;" onclick="decreaseVolume()">
+            Bajar Volumen
+         </button>
+        </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
